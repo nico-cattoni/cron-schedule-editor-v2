@@ -1,0 +1,219 @@
+.app {
+  max-width: 480px;
+  margin: 30px auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f8f9fa;
+  padding: 20px 30px;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 24px;
+}
+
+form fieldset {
+  border: 1px solid #ccc;
+  padding: 15px 20px 20px 20px;
+  border-radius: 6px;
+  background-color: #fff;
+  margin-bottom: 20px;
+}
+
+form legend {
+  font-weight: 600;
+  color: #555;
+  padding: 0 6px;
+}
+
+label {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  color: #444;
+  user-select: none;
+}
+
+input[type="radio"] {
+  margin-right: 8px;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+input[type="number"],
+input[type="text"],
+input[type="time"] {
+  padding: 6px 10px;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 1rem;
+  margin-top: 6px;
+  margin-bottom: 12px;
+  transition: border-color 0.2s ease;
+}
+
+input[type="number"]:focus,
+input[type="text"]:focus,
+input[type="time"]:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+button {
+  background-color: #007bff;
+  border: none;
+  padding: 10px 18px;
+  margin-right: 12px;
+  color: white;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  user-select: none;
+}
+
+button:hover,
+button:focus {
+  background-color: #0056b3;
+  outline: none;
+}
+
+textarea {
+  width: 100%;
+  font-family: monospace;
+  font-size: 1rem;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #bbb;
+  resize: vertical;
+  margin-top: 12px;
+  min-height: 40px;
+  background-color: #fefefe;
+  transition: border-color 0.2s ease;
+}
+
+textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Contenedores específicos */
+
+.weekly-options,
+.daily-options,
+.monthly-options {
+  margin-top: 12px;
+}
+
+/* WeeklyOptions */
+
+.weekly-options>div:first-child label {
+  margin-right: 12px;
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+}
+
+.weekly-options input[type="checkbox"] {
+  margin-right: 6px;
+  cursor: pointer;
+}
+
+/* MonthlyOptions */
+
+.monthly-options>div:first-child {
+  max-height: 110px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  padding: 8px 10px;
+  border-radius: 4px;
+  background: #fafafa;
+}
+
+.monthly-options label {
+  margin-right: 10px;
+  width: 30px;
+  display: inline-block;
+  text-align: center;
+  user-select: none;
+}
+
+.monthly-options input[type="checkbox"] {
+  cursor: pointer;
+}
+
+/* DailyOptions */
+
+.daily-options>div {
+  margin-bottom: 16px;
+}
+
+.daily-options input[type="radio"] {
+  margin-right: 8px;
+}
+
+.daily-options input[type="number"] {
+  width: 80px;
+  display: inline-block;
+}
+
+.daily-options .specific-times-list>div {
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.daily-options .specific-times-list input[type="time"] {
+  max-width: 120px;
+  margin-right: 8px;
+}
+
+.daily-options .specific-times-list button {
+  padding: 6px 10px;
+  font-size: 0.9rem;
+  background-color: #dc3545;
+  border-radius: 4px;
+  margin-left: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.daily-options .specific-times-list button:hover {
+  background-color: #a71d2a;
+}
+
+/* Flex helpers */
+
+.flex-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Scrollbar styling for monthly days */
+
+.monthly-options>div:first-child::-webkit-scrollbar {
+  width: 6px;
+}
+
+.monthly-options>div:first-child::-webkit-scrollbar-thumb {
+  background-color: #bbb;
+  border-radius: 3px;
+}
+
+/* Responsive tweaks */
+
+@media (max-width: 500px) {
+  .app {
+    padding: 15px 20px;
+  }
+
+  button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
